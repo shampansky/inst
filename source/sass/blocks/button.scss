@@ -1,0 +1,35 @@
+.button {
+  display: block;
+  padding: 16px;
+  width: 280px;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+
+  background-color: #81b3d2;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: #88b6d1;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+  }
+}
