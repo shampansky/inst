@@ -1,0 +1,27 @@
+.tags {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+.tags__item {
+  margin-right: 15px;
+  margin-bottom: 8px;
+
+  background-color: #e7e7e7;
+  border-radius: 5px;
+}
+
+.tags__link {
+  display: block;
+  padding: 5px 10px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #737373;
+  text-decoration: none;
+}

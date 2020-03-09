@@ -1,0 +1,95 @@
+.contacts__wrapper {
+  display: flex;
+}
+
+.contacts__map {
+  width: 60%;
+}
+
+.contacts__right {
+  width: 40%;
+}
+
+.contacts__right-top {
+  padding: 54px 20px 40px 98px;
+  background-color: #000000;
+}
+
+.contacts__logo {
+  display: block;
+  margin-bottom: 35px;
+}
+
+.contacts__logo-image {
+  display: block;
+}
+
+.contacts__address {
+  margin-bottom: 30px;
+
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.contacts__work-hours {
+  border-collapse: collapse;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.contacts__work-day {
+  margin: 0;
+  padding: 0;
+  padding-right: 25px;
+  padding-bottom: 12px;
+  border-right: 1px solid #ffffff;
+}
+
+.contacts__work-day--last {
+  padding-bottom: 0;
+}
+
+.contacts__work-time {
+  margin: 0;
+  padding: 0;
+  padding-left: 25px;
+  padding-bottom: 12px;
+}
+
+.contacts__work-time--last {
+  padding-bottom: 0;
+}
+
+.contacts__phone {
+  display: block;
+  margin-bottom: 20px;
+
+  font-size: 24px;
+  line-height: 29px;
+  color: #212121;
+}
+
+.contacts__email {
+  display: block;
+  margin-bottom: 25px;
+
+  font-size: 24px;
+  line-height: 29px;
+  color: #212121;
+}
+
+.contacts__right-bottom {
+  padding: 35px 20px 40px 98px;
+  background-color: #ffffff;
+}
+
+.contacts__social {
+  margin: 0;
+  padding: 0;
+}

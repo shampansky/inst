@@ -1,9 +1,10 @@
 {
   "name": "inst",
-  "version": "1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Институт права",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
     "del": "^5.0.0",
@@ -23,7 +24,7 @@
     "posthtml-include": "^1.2.0",
     "readable-stream": "^3.4.0",
     "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "^0.1.4"
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

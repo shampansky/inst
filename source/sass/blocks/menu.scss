@@ -1,0 +1,47 @@
+.menu {
+  display: flex;
+  margin: 0;
+}
+
+.menu__item {
+  position: relative;
+
+  margin: 0;
+  margin-right: 40px;
+  margin-top: 50px;
+  padding: 0;
+
+  list-style: none;
+  border-bottom: 5px solid transparent;
+  transition: 0.2s ease-in-out;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border-bottom: 5px solid #148de8;
+  }
+
+  &:hover .submenu {
+    visibility: visible;
+  }
+}
+
+.menu__link {
+  display: block;
+  padding-bottom: 45px;
+
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  color: #212121;
+  text-decoration: none;
+}
+
+.menu__submenu {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

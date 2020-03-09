@@ -1,0 +1,68 @@
+.masonry__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.masonry__list--m-top {
+  margin-top: 100px;
+}
+
+.masonry__item {
+  width: 264px;
+  margin-bottom: 50px;
+}
+
+.masonry__item--large {
+  width: 558px;
+}
+
+.masonry__item--hor {
+  display: flex;
+  width: 558px;
+  margin-bottom: 54px;
+}
+
+.masonry__item--hor .masonry__item-desc {
+  margin-left: 30px;
+}
+
+.masonry__item-link {
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.masonry__item-image {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.masonry__add-info {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #737373;
+}
+
+.masonry__item-title {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
+  color: #373737;
+}
+
+.masonry__item-caption {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 600;
+  color: #737373;
+}

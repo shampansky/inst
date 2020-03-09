@@ -11,18 +11,13 @@ html {
 body {
   margin: 0;
 
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: normal;
-  color: #333333;
-  text-transform: uppercase;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #373737;
 
   background-color: #ffffff;
-
-  @media (min-width: $desktop-width) {
-    background-color: #f2f2f2;
-  }
 }
 
 img {
@@ -59,4 +54,39 @@ input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   white-space: nowrap;
+}
+
+.wrapper {
+  width: 1146px;
+  margin: 0 auto;
+}
+
+.title {
+  padding: 0;
+  margin: 65px 0 30px;
+
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: bold;
+  color: #212121;
+}
+
+.title-l2 {
+  padding: 0;
+  margin: 0 0 25px;
+
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 600;
+  color: #373737;
+}
+
+.caption {
+  margin: 0 0 60px;
+
+  font-size: 25px;
+  line-height: 30px;
+  font-style: italic;
+  font-weight: normal;
+  color: #373737;
 }

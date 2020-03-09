@@ -1,0 +1,71 @@
+.page-header__top-wrapper {
+  width: 1146px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.page-header__employment {
+  margin-right: 45px;
+
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  color: #212121;
+  text-decoration: none;
+}
+
+.page-header__social {
+  margin: 0 35px 0 0;
+  padding: 0;
+}
+
+.page-header__phone {
+  margin-right: 75px;
+
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  color: #212121;
+}
+
+.page-header__search {
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header__search svg {
+  display: block;
+}
+
+.page-header__bottom {
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.page-header--index .page-header__bottom {
+  border-bottom: none;
+}
+
+.page-header__bottom-wrapper {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  align-self: center;
+}
+
+.page-header__logo-image {
+  display: block;
+}

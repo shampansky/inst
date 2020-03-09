@@ -1,0 +1,24 @@
+.union__list {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.union__item {
+  width: 33.333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 15px;
+}
+
+.union__item-caption {
+  text-align: center;
+  padding: 0 15px;
+}

@@ -1,0 +1,143 @@
+.content p {
+  margin: 0 0 10px;
+}
+
+.content a {
+  color: #373737;
+}
+
+.content strong {
+  font-weight: 400;
+}
+
+.content ul,
+.content ol {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  counter-reset: item;
+}
+
+.content ul li {
+  position: relative;
+
+  padding-left: 15px;
+  margin-bottom: 8px;
+}
+
+.content ol li {
+  position: relative;
+
+  padding-left: 25px;
+  margin-bottom: 8px;
+}
+
+.content ul li::before {
+  content: "-";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.content ol li::before {
+  content: counter(item) ") "; /* Добавляем к числам скобку */
+  counter-increment: item; /* Задаём имя счетчика */
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+.content__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.content__item--border {
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.content__item--left {
+  justify-content: flex-start;
+}
+
+.content__item--text-top {
+  align-items: flex-start;
+}
+
+.content__text-margin-left {
+  margin-left: 30px;
+}
+
+.content__text-margin-right {
+  margin-right: 30px;
+}
+
+.content__text-no-margin {
+  margin: 0;
+}
+
+.content__text-two-cols {
+  column-count: 2;
+  margin-bottom: 45px;
+}
+
+.content-image {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.content__w50 {
+  width: calc(50% - 15px);
+}
+
+.content__w33 {
+  width: calc(33.33333% - 20px);
+}
+
+.content__w33-center {
+  width: 33.333%;
+  padding: 0 15px;
+}
+
+.content__362 {
+  width: 362px;
+  flex-shrink: 0;
+}
+
+.content__362--left {
+  margin-right: 30px;
+}
+
+.content__362--right {
+  margin-left: 30px;
+}
+
+.content__vert {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__vert--reverse {
+  flex-direction: column-reverse;
+}
+
+.content__link-doc {
+  height: 56px;
+  padding: 0 0 0 65px;
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+
+  background-image: url("../../img/icon-file.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}

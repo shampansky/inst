@@ -1,35 +1,30 @@
 .button {
   display: block;
-  padding: 16px;
-  width: 280px;
+  padding: 18px 28px;
 
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: normal;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
+  color: #148de8;
 
-  background-color: #81b3d2;
-  border: none;
+  background-color: transparent;
+  border: 1px solid #148de8;
+  cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: #669ec0;
-    outline: none;
+    color: #ffffff;
+    background-color: #148de8;
   }
 
   &:active {
-    background-color: #5496bd;
-    color: #88b6d1;
+    color: #ffffff;
+    background-color: #148de8;
   }
 
   &:disabled {
     background-color: #e5e5e5;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 458px;
   }
 }

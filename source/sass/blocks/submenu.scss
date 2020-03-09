@@ -1,0 +1,35 @@
+.submenu {
+  position: absolute;
+  top: 100%;
+  right: -10px;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 500px;
+  padding: 25px 10px;
+  margin-top: 6px;
+
+  background-color: #ffffff;
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
+}
+
+.submenu__item {
+  margin-right: 25px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.submenu__link {
+  font-size: 14px;
+  line-height: 17px;
+  color: #999999;
+  text-decoration: none;
+}
+
+.submenu__link:hover {
+  color: #373737;
+}

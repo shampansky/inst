@@ -1,0 +1,22 @@
+.social {
+  display: flex;
+  align-items: center;
+
+  list-style: none;
+}
+
+.social__item {
+  margin-right: 28px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: block;
+}
+
+.social__link svg {
+  display: block;
+}
