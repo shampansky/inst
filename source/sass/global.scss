@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  min-width: 1176px;
   margin: 0;
 
   font-family: "Proxima Nova", "Arial", sans-serif;
@@ -57,8 +58,9 @@ input[type="radio"].visually-hidden {
 }
 
 .wrapper {
-  width: 1146px;
+  width: 1176px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .title {

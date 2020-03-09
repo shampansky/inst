@@ -1,7 +1,8 @@
 .page-header__top-wrapper {
-  width: 1146px;
+  width: 1176px;
   height: 50px;
   margin: 0 auto;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -54,9 +55,9 @@
 }
 
 .page-header__bottom-wrapper {
-  width: 1146px;
+  width: 1176px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 15px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
