@@ -1,0 +1,26 @@
+.members {
+  padding-bottom: 50px;
+
+  border-top: 1px solid #dbdbdb;
+}
+
+.members__item {
+  max-width: 264px;
+  margin-bottom: 30px;
+}
+
+.members__item-image {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.members__item-caption {
+  margin: 0;
+
+  text-align: center;
+}
+
+.members__pagination {
+  top: auto !important;
+  bottom: 0;
+}

@@ -1,0 +1,26 @@
+.management {
+  padding-bottom: 50px;
+
+  border-top: 1px solid #dbdbdb;
+}
+
+.management__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.management__item {
+  max-width: 362px;
+  margin-bottom: 40px;
+}
+
+.management__item-image {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.management__item-caption {
+  margin: 0;
+
+  text-align: center;
+}

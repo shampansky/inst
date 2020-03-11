@@ -15,6 +15,10 @@
       document.createElement("picture");
     </script>
     <script src="js/picturefill.js" async></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/pepper-grinder/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/dubrox/Multiple-Dates-Picker-for-jQuery-UI/master/jquery-ui.multidatespicker.css">
+
+
   </head>
   <body>
     <div class="svg-wrapper">
@@ -107,93 +111,22 @@
       </header>
 
       <main class="page-main">
+        <header class="main-header wrapper">
+          <h1 class="main-header__title title">Календарь мероприятий</h1>
+        </header>
 
-        <section class="content wrapper">
+        <div class="calendar wrapper" id="calendar"></div>
+<button class="reset1">reset</button>
+<button class="go">apply</button>
 
-          <img class="content-image" src="img/brain-ring-01.jpg" alt="">
-
-          <h1 class="title-l2">Республиканский юридический брейн-ринг среди школьников 9–11 классов</h1>
-
-          <div class="content__text-two-cols">
-            <p>2 ноября в стенах Института права в восьмой раз прошёл Республиканский юридический Брейн-ринг среди школьников 9-11 классов. Организаторами данного мероприятия стал коллектив Научного общества молодых исследователей. Осень для молодых учёных не только начало нового учебного года, но и старт для открытия научных мероприятий в которых будущие юристы и юные правоведы смогут показать себя.</p>
-            <p>О каком Брейн-ринге в стенах Института права может идти речь? — могли бы вы подумать.</p>
-            <p>Исходя из этимологии, Брейн-ринг состоит из двух английских слов brain — мозг и ring — специально подготовленная площадка для проведения поединков, то есть «интеллектуальный ринг», в данном поединке не так важна физическая подготовленность участников, как их знания и эрудиция. Вот уже семь раз подряд Научным обществом молодых исследователей был организован Брейн-ринг для старшеклассников, так и осень 2019 года не могла обойтись без уже общепринятого и долгожданного мероприятия.</p>
-          </div>
-
-          <div class="content__item">
-            <img src="img/brain-ring-02.jpg" alt="">
-            <div class="content__text-margin-left">
-              <p>Участие в данном «поединке умов» приняли одни из лучших старшеклассников школ разных уголков республики. Мероприятие проходило в три этапа, два из которых были командными и один только для капитанов команд. В первом туре школьники столкнулись с вопросами на знания основ права, во втором туре преодолели решение юридических задач, а в конкурсе капитанов проявили креативность и сильнейшие вышли в финал.</p>
-            </div>
-          </div>
-
-          <div class="content__item">
-            <div class="content__w50">
-              <p>Ребята показали хорошие знания по юридическим дисциплинам, а также отлично проявили себя, отвечая на вопросы, направленные на обширный кругозор и начитанность в правовой сфере. Для справедливой оценки наших знатоков права, НОМИ было приглашено многоуважаемое жюри Института права, в состав которого вошли: доцент, к.ю.н Касимов Тимур Салаватович, доцент, к.ю.н Сагитдинова Зульфия Индусовна, доцент, к.ю.н Гимадрисламова Олеся Рамильевна, старший преподаватель Балякина Елена Борисовна.</p>
-              <p>По прошествии интеллектуальной игры участники были награждены грамотами, наставникам-учителям команд вручены благодарственные письма, а призёры награждены медалями и памятными призами.</p>
-            </div>
-            <div class="content__w50">
-              <img src="img/brain-ring-03.jpg" alt="">
-            </div>
-          </div>
-        </section>
-
-        <section class="newsletter">
-          <div class="newsletter__wrapper wrapper">
-            <h2 class="newsletter__title"></h2>
-            <form action="" class="newsletter__form">
-              <label class="visually-hidden" for="email">E-mail</label>
-              <input class="newsletter__email" type="email" id="email" name="email" placeholder="Ваш e-mail">
-              <label class="visually-hidden" for="category">Рубрика</label>
-              <div class="newsletter__category-wrapper">
-                <select class="newsletter__category" id="category" name="category">
-                  <option value="all">Все рубрики</option>
-                  <option value="vacancy">Вакансии</option>
-                  <option value="events" selected>Мероприятия</option>
-                  <option value="news">Новости</option>
-                </select>
-              </div>
-              <input class="button" type="submit" value="Подписаться">
-            </form>
-          </div>
-        </section>
-
+<div class="result"></div>
         <section class="events wrapper">
           <div class="events__header">
-            <h2 class="events__title title">Мероприятия для школьников</h2>
+            <h2 class="events__title title">План мероприятий на 2020 год</h2>
             <a href="#" class="events__header-link">Календарь мероприятий</a>
           </div>
 
           <ul class="events__list">
-            <li class="events__item">
-              <div class="events__date-wrapper">
-                <span class="events__date">00</span>
-                <div class="events__month-wrapper">
-                  <span class="events__month">Января&nbsp;2020</span>
-                  <span class="events__weekday">Пт</span>
-                </div>
-              </div>
-
-              <div class="events__image-wrapper">
-                <img src="img/event-01.jpg" alt="" class="events__image">
-              </div>
-              <div class="events__desc-wrapper">
-                <h3 class="events__item-title"><a href="#">Набор в открытую правовую школу</a></h3>
-                <ul class="evnets__tags tags">
-                  <li class="tags__item">
-                    <a class="tags__link" href="#">Поступающим</a>
-                  </li>
-                  <li class="tags__item">
-                    <a class="tags__link" href="#">Мероприятия</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="events__start-wrapper">
-                <p class="events__start-time">Начало в 14:00</p>
-                <p class="events__address">г. Уфа, ул. Достоевского, 131</p>
-              </div>
-            </li>
-
             <li class="events__item">
               <div class="events__date-wrapper">
                 <span class="events__date">00</span>
@@ -236,7 +169,7 @@
                 <img src="img/event-01.jpg" alt="" class="events__image">
               </div>
               <div class="events__desc-wrapper">
-                <h3 class="events__item-title"><a href="#">Школа юного криминалиста</a></h3>
+                <h3 class="events__item-title"><a href="#">Юридическое консультирование</a></h3>
                 <ul class="evnets__tags tags">
                   <li class="tags__item">
                     <a class="tags__link" href="#">Поступающим</a>
@@ -265,7 +198,7 @@
                 <img src="img/event-01.jpg" alt="" class="events__image">
               </div>
               <div class="events__desc-wrapper">
-                <h3 class="events__item-title"><a href="#">Республиканская олимпиада по страноведению на английском языке</a></h3>
+                <h3 class="events__item-title"><a href="#">III Открытый шахматный турнир</a></h3>
                 <ul class="evnets__tags tags">
                   <li class="tags__item">
                     <a class="tags__link" href="#">Поступающим</a>
@@ -294,7 +227,7 @@
                 <img src="img/event-01.jpg" alt="" class="events__image">
               </div>
               <div class="events__desc-wrapper">
-                <h3 class="events__item-title"><a href="#">Конкурс творческих работ «Конституция глазами школьника»</a></h3>
+                <h3 class="events__item-title"><a href="#">Интеллектуальные игры среди студентов</a></h3>
                 <ul class="evnets__tags tags">
                   <li class="tags__item">
                     <a class="tags__link" href="#">Поступающим</a>
@@ -312,6 +245,7 @@
 
           </ul>
         </section>
+
 
       </main>
       <footer class="page-footer">
@@ -388,7 +322,16 @@
 
       </footer>
 
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://github.com/jquery/jquery-ui/blob/master/ui/i18n/datepicker-ru.js"></script>
+
+    <script src="https://cdn.rawgit.com/dubrox/Multiple-Dates-Picker-for-jQuery-UI/master/jquery-ui.multidatespicker.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
+
+
