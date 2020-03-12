@@ -15,10 +15,8 @@
       document.createElement("picture");
     </script>
     <script src="js/picturefill.js" async></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/pepper-grinder/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"> -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/dubrox/Multiple-Dates-Picker-for-jQuery-UI/master/jquery-ui.multidatespicker.css">
-
-
   </head>
   <body>
     <div class="svg-wrapper">
@@ -114,10 +112,18 @@
         <header class="main-header wrapper">
           <h1 class="main-header__title title">Календарь мероприятий</h1>
         </header>
+        
+        <div class="calendar wrapper">
+          <div class="calendar__wrapper">
+            <div id="calendar"></div>
+            <div class="calendar__button-wrapper">
+              <button class="calendar__reset">Сбросить</button>
+              <button class="calendar__apply">Применить</button>
+            </div>
+          </div>
+        </div>
+        
 
-        <div class="calendar wrapper" id="calendar"></div>
-<button class="reset1">reset</button>
-<button class="go">apply</button>
 
 <div class="result"></div>
         <section class="events wrapper">
@@ -324,8 +330,8 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://github.com/jquery/jquery-ui/blob/master/ui/i18n/datepicker-ru.js"></script>
 
     <script src="https://cdn.rawgit.com/dubrox/Multiple-Dates-Picker-for-jQuery-UI/master/jquery-ui.multidatespicker.js"></script>

@@ -59,24 +59,20 @@ window.onload = function() {
 
   if(document.querySelector('.articles')) {
     new Swiper ('.articles', {
-      // Optional parameters
       slidesPerView: 'auto',
       centeredSlides: true,
       spaceBetween: 30,
       initialSlide: 1,
 
-      // If we need pagination
       pagination: {
         el: '.swiper-pagination',
       },
 
-      // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
 
-      // And if we need scrollbar
       scrollbar: {
         el: '.swiper-scrollbar',
       },
@@ -86,11 +82,9 @@ window.onload = function() {
    /* Слайдер Члены НОМИ */
    if(document.querySelector('.members__council-container')) {
     new Swiper ('.members__council-container', {
-      // Optional parameters
       slidesPerView: 4,
       spaceBetween: 30,
 
-      // If we need pagination
       pagination: {
         el: '.swiper-pagination',
         type: 'progressbar',
@@ -100,11 +94,9 @@ window.onload = function() {
 
    if(document.querySelector('.members__container')) {
       new Swiper ('.members__container', {
-        // Optional parameters
         slidesPerView: 4,
         spaceBetween: 30,
 
-        // If we need pagination
         pagination: {
           el: '.swiper-pagination',
           type: 'progressbar',
@@ -115,55 +107,81 @@ window.onload = function() {
 
 }
 
-/* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
+/* Календарь */
 
-( function( factory ) {
-	if ( typeof define === "function" && define.amd ) {
+if(document.querySelector('#calendar')) {
 
-		// AMD. Register as an anonymous module.
-		define( [ "../widgets/datepicker" ], factory );
-	} else {
+  ( function( factory ) {
+    if ( typeof define === "function" && define.amd ) {
+  
+      // AMD. Register as an anonymous module.
+      define( [ "../widgets/datepicker" ], factory );
+    } else {
+  
+      // Browser globals
+      factory( jQuery.datepicker );
+    }
+  }( function( datepicker ) {
+  
+  datepicker.regional.ru = {
+    closeText: "Закрыть",
+    prevText: "&#x3C;",
+    nextText: "&#x3E;",
+    currentText: "Сегодня",
+    monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",
+    "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],
+    monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",
+    "Июл","Авг","Сен","Окт","Ноя","Дек" ],
+    dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],
+    dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],
+    dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],
+    weekHeader: "Нед",
+    dateFormat: "dd.mm.yy",
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: "" };
+  datepicker.setDefaults( datepicker.regional.ru );
+  
+  return datepicker.regional.ru;
+  
+  } ) );
+  var today = new Date();
+  var y = today.getFullYear();
+  $('#calendar').multiDatesPicker({
+    numberOfMonths: [1, 2],
+    maxPicks: 2
+  });
+  
+  $('.calendar__reset').on('click', function() {
+    $('#calendar').multiDatesPicker('resetDates');
+  });
+  
+  $('.calendar__apply').on('click', function() {
+    $('#calendar').multiDatesPicker('getDates');
+  });
 
-		// Browser globals
-		factory( jQuery.datepicker );
-	}
-}( function( datepicker ) {
+  Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+  }
 
-datepicker.regional.ru = {
-	closeText: "Закрыть",
-	prevText: "&#x3C;Пред",
-	nextText: "След&#x3E;",
-	currentText: "Сегодня",
-	monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",
-	"Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],
-	monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",
-	"Июл","Авг","Сен","Окт","Ноя","Дек" ],
-	dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],
-	dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],
-	dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],
-	weekHeader: "Нед",
-	dateFormat: "dd.mm.yy",
-	firstDay: 1,
-	isRTL: false,
-	showMonthAfterYear: false,
-	yearSuffix: "" };
-datepicker.setDefaults( datepicker.regional.ru );
+  function getDates(startDate, stopDate) {
+      var dateArray = new Array();
+      var currentDate = startDate;
+      while (currentDate <= stopDate) {
+          dateArray.push(new Date (currentDate));
+          currentDate = currentDate.addDays(1);
+      }
+      return dateArray;
+  }
 
-return datepicker.regional.ru;
-
-} ) );
-var today = new Date();
-var y = today.getFullYear();
-$('#calendar').multiDatesPicker({
-  numberOfMonths: [1, 2],
-  maxPicks: 2
-});
-
-$('.reset1').on('click', function() {
-  $('#calendar').multiDatesPicker('resetDates');
-});
-
-$('.go').on('click', function() {
-  $('#calendar').multiDatesPicker('getDates');
-  $('.result').append($('#mdp-demo').multiDatesPicker('getDates'));
-});
+  $('#calendar td').on('click', function() {
+    if ($('#calendar td.ui-state-highlight').length === 2)
+    {
+      var startDate = new Date($('#calendar').multiDatesPicker('getDates')[0]);
+      var endDate = new Date($('#calendar').multiDatesPicker('getDates')[1]);
+    }
+  });
+}
